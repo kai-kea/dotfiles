@@ -84,6 +84,11 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    # change the color for dir that is other-writable (o+w) and not sticky
+    # default is 34;42  (blue on green)
+    # new is     34;100 (blue on grey)
+    # most WSL folders are other-writable, blue green is not readable
+    LS_COLORS=$LS_COLORS:'ow=34;100:'
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'

@@ -147,3 +147,6 @@ export PATH=$PATH:/usr/local/go/bin
 
 # git bare dotfiles dir
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+
+# homework server
+alias mimi="ssh jaldri6@mimi.cs.mcgill.ca"

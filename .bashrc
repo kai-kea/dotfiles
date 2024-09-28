@@ -149,4 +149,4 @@ export PATH=$PATH:/usr/local/go/bin
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
 # homework server
-alias mimi="ssh jaldri6@mimi.cs.mcgill.ca"
+alias mimi="sudo sshfs jaldri6@mimi.cs.mcgill.ca: /mnt/mimi -o allow_other -o IdentityFile=$HOME/.ssh/id_rsa && tmux neww -d ssh jaldri6@mimi.cs.mcgill.ca && nvim /mnt/mimi"

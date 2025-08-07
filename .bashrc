@@ -145,8 +145,6 @@ export XDG_RUNTIME_DIR="$PREFIX/tmp"
 # golang
 export PATH=$PATH:/usr/local/go/bin
 
-# git bare dotfiles dir
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+# OCaml
+eval $(opam env)
 
-# homework server
-alias mimi="sudo sshfs jaldri6@mimi.cs.mcgill.ca: /mnt/mimi -o allow_other -o IdentityFile=$HOME/.ssh/id_rsa && tmux neww -d ssh jaldri6@mimi.cs.mcgill.ca && nvim /mnt/mimi"
